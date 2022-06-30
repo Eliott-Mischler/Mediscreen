@@ -1,0 +1,11 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+table, td, th {
+    border: 2px solid gray;
+}
+
+table {
+    border-collapse: collapse;
+}

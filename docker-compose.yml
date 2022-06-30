@@ -1,0 +1,13 @@
+services:
+  database:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'mediscreen'
+      MYSQL_USER: 'eliott'
+      MYSQL_PASSWORD: 'datasperger'
+      MYSQL_ROOT_PASSWORD: '1048576'
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
