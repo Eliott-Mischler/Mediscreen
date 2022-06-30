@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mediscreen-webapp" />
+        <module name="mediscreen-notes" />
         <module name="mediscreenbackend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mediscreen-notes" target="1.5" />
       <module name="mediscreen-webapp" target="17" />
       <module name="mediscreenbackend" target="17" />
     </bytecodeTargetLevel>

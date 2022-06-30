@@ -11,3 +11,12 @@ services:
       - '3307:3306'
     expose:
       - '3306'
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'root'
+      MONGO_INITDB_ROOT_PASSWORD: '1048576'
+    ports:
+      - "27017:27017"
+
