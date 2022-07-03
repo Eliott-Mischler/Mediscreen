@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <form action="#" th:action="@{/patient-notes/{id}/add(id=${patientId})}" th:object="${patientNotes}" id="notes-form" method="POST">
+        <textarea form="notes-form" th:field="*{doctorNotes}" cols="40" rows="5" required></textarea>
+        <button type="submit">Post Notes</button>
+    </form>
+</body>
+</html>

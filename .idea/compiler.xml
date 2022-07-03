@@ -13,13 +13,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mediscreen-notes" target="1.5" />
+      <module name="mediscreen-notes" target="17" />
       <module name="mediscreen-webapp" target="17" />
       <module name="mediscreenbackend" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mediscreen-notes" options="-parameters" />
       <module name="mediscreen-webapp" options="-parameters" />
       <module name="mediscreenbackend" options="-parameters" />
     </option>

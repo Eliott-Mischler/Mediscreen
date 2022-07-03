@@ -28,7 +28,7 @@
             <td th:text="${p.gender}"></td>
             <td th:text="${p.address}"></td>
             <td th:text="${p.diabetesScore}"></td>
-            <td th:text="${p.notes}"></td>
+            <td><a th:href="@{/patient-notes/{id}(id=${p.id})}">></a></td>
         </tr>
     </table>
     <a href="add-patient">Add a patient</a>

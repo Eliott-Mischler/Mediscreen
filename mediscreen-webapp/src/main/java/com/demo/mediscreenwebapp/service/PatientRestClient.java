@@ -1,6 +1,7 @@
 package com.demo.mediscreenwebapp.service;
 
 import com.demo.mediscreenwebapp.model.Patient;
+import com.demo.mediscreenwebapp.model.PatientNotes;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -30,4 +31,6 @@ public class PatientRestClient {
                 .bodyToMono(Patient.class)
                 .block();
     }
+
+
 }
