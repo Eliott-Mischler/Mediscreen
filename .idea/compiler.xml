@@ -8,16 +8,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mediscreen-webapp" />
+        <module name="mediscreen-notes" />
         <module name="mediscreenbackend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mediscreen-notes" target="17" />
       <module name="mediscreen-webapp" target="17" />
       <module name="mediscreenbackend" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mediscreen-notes" options="-parameters" />
       <module name="mediscreen-webapp" options="-parameters" />
       <module name="mediscreenbackend" options="-parameters" />
     </option>

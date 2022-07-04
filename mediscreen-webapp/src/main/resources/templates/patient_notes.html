@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <a th:href="@{/patient-notes/{id}/add(id=${patientId})}">Add notes</a>
+    <p th:text="${patientId}"></p>
+    <div>
+        <p th:each="n : ${patientNotes}">
+            <span th:text="${n.doctorNotes}"></span>
+        </p>
+    </div>
+
+</body>
+</html>

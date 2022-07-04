@@ -1,5 +1,6 @@
 services:
   database:
+    container_name : mysql_mediscreen
     image: mysql
     restart: always
     environment:
@@ -11,3 +12,19 @@ services:
       - '3307:3306'
     expose:
       - '3306'
+  mongo:
+    image: mongo:latest
+    container_name : mongodb_mediscreen
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: datasperger
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_db:/data/db
+volumes:
+  mongodb_db:
+
+
+
