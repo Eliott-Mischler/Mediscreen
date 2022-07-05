@@ -27,7 +27,7 @@
             <td th:text="${p.birthdate}"></td>
             <td th:text="${p.gender}"></td>
             <td th:text="${p.address}"></td>
-            <td th:text="${p.diabetesScore}"></td>
+            <td th:text="${p.riskLevel.displayValue}"></td>
             <td><a th:href="@{/patient-notes/{id}(id=${p.id})}">></a></td>
         </tr>
     </table>

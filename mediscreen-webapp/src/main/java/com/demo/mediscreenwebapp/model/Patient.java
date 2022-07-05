@@ -20,6 +20,7 @@ public class Patient {
     private String birthdate;
     private String phone;
     private String address;
+    private RiskLevel riskLevel;
     private Double diabetesScore;
 
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class PatientController {
@@ -22,7 +23,10 @@ public class PatientController {
 
     @GetMapping("list")
     public ModelAndView listGet(Model model) {
-        return new ModelAndView("patients_list", "patients", patientService.getAllPatients());
+
+        List<Patient> patients = patientService.updateAllPatients();
+        model.addAttribute("patients", patients);
+        return new ModelAndView("patients_list");
     }
 
 

@@ -1,5 +1,6 @@
 package com.demo.mediscreennotes.controller;
 
+import com.demo.mediscreennotes.model.RiskLevel;
 import com.demo.mediscreennotes.service.PatientService;
 import com.demo.mediscreennotes.model.PatientNotes;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +25,6 @@ public class PatientController {
         String doctorNotes = patientNotes.getDoctorNotes();
         return patientService.newPatientNotes(patientNotes);
     }
+
+
 }

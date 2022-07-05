@@ -1,13 +1,14 @@
 package com.demo.mediscreenwebapp.model;
 
-public enum Gender {
-    MALE("Male"),
-    FEMALE("Female"),
-    OTHER("Other");
+public enum RiskLevel {
+    NONE("None"),
+    BORDERLINE("Borderline"),
+    DANGER("Danger"),
+    EARLY_ONSET("Early Onset");
 
     private final String displayValue;
 
-    Gender(String displayValue) {
+    RiskLevel(String displayValue) {
         this.displayValue = displayValue;
     }
 

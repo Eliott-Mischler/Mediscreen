@@ -5,10 +5,7 @@ import com.demo.mediscreenbackend.model.Patient;
 import com.demo.mediscreenbackend.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,5 +25,8 @@ public class PatientController {
         return this.patientService.newPatient(patient);
     }
 
-
+    @GetMapping("patients/{id}")
+    public Patient getPatientFromId(@PathVariable("id") Long id) {
+        return patientService.getPatientById(id);
+    }
 }

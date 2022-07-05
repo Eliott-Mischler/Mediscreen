@@ -1,8 +1,10 @@
 package com.demo.mediscreenwebapp.controller;
 
 
+import com.demo.mediscreenwebapp.model.Patient;
 import com.demo.mediscreenwebapp.model.PatientNotes;
 import com.demo.mediscreenwebapp.service.PatientNotesService;
+import com.demo.mediscreenwebapp.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +19,13 @@ public class PatientNotesController {
     @Autowired
     private PatientNotesService patientNotesService;
 
+    @Autowired
+    private PatientService patientService;
+
     @GetMapping("/patient-notes/{id}")
     public ModelAndView getPatientNotes(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("patientId", id);
+        Patient patient = patientService.getPatientById(id);
+        model.addAttribute("patient", patient);
         return new ModelAndView("patient_notes", "patientNotes", patientNotesService.getAllPatientNotesFromId(id));
     }
 

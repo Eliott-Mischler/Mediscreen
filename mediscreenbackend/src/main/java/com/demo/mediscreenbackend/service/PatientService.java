@@ -20,4 +20,6 @@ public class PatientService {
     public Patient newPatient(Patient patient) {
         return this.patientRepository.save(patient);
     }
+
+    public Patient getPatientById(Long id) { return this.patientRepository.findById(id).get();}
 }

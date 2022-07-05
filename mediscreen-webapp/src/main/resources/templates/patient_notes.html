@@ -9,8 +9,9 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
-    <a th:href="@{/patient-notes/{id}/add(id=${patientId})}">Add notes</a>
-    <p th:text="${patientId}"></p>
+    <a th:href="@{/patient-notes/{id}/add(id=${patient.Id})}">Add notes</a>
+    <a th:href="@{/list}">List</a>
+    <p th:text="'Notes for ' + ${patient.firstName} + ' ' + ${patient.lastName}"></p>
     <div>
         <p th:each="n : ${patientNotes}">
             <span th:text="${n.doctorNotes}"></span>
